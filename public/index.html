@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Call System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Voice Call System</h1>
+        <div id="authSection">
+            <input type="text" id="username" placeholder="Username" />
+            <input type="password" id="password" placeholder="Password" />
+            <button id="registerBtn">Register</button>
+            <button id="loginBtn">Login</button>
+        </div>
+
+        <div id="callSection" style="display: none;">
+            <input type="text" id="roomInput" placeholder="Enter room name" />
+            <button id="createRoom">Create Room</button>
+            <button id="joinRoom">Join Room</button>
+            <h2>In Call</h2>
+            <button id="muteBtn">Mute</button>
+            <button id="leaveCall">Leave Call</button>
+            <audio id="remoteAudio" controls autoplay></audio>
+
+            <div id="inviteSection" style="display: none;">
+                <h3>Invite URL:</h3>
+                <input type="text" id="inviteUrl" readonly />
+                <button id="copyUrl">Copy URL</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
